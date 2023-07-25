@@ -1,14 +1,14 @@
 
 
 
-function Filter(){
+function Filter({filterData}){
     return(
         <div className="fill">
-  <button className="al">All</button>
-  <button className="dev">Developement</button>
-  <button className="des">Design</button>
-  <button className="bus">Business</button>
-  <button className="life">Lifestyle</button>
+         {filterData.map((data)=>{
+             return( <button key={data.id}>
+                {data.title}
+              </button>)
+         })}
         </div>
     )
 }
